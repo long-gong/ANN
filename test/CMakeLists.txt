@@ -3,6 +3,8 @@ set(HEADERs "rand.h")
 
 set(target "ann_test")
 add_executable(${target} ${SRCs} ${HEADERs})
+target_link_libraries(${target}
+        ANN)
 add_test(NAME ${PROJECT_NAME}_test
         COMMAND $<TARGET_FILE:${target}>)
 
